@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:checked="false"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/list_kos"
+            android:checked="false"
+            android:icon="@drawable/check"
+            android:title="List kos" />
+
+        <item
+            android:id="@+id/input_kos"
+            android:checked="false"
+            android:icon="@drawable/ic_send_black"
+            android:title="input kos" />
+
+        <item
+            android:id="@+id/keluar"
+            android:checked="false"
+            android:icon="@drawable/icon"
+            android:title="keluar" />
+
+    </group>
+</menu>
