@@ -2,6 +2,7 @@ package com.kos.pemilik;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,7 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -49,6 +52,24 @@ public class ContentFragment extends Fragment {
 
         adapter = new Adapter(ContentFragment.this.getActivity(), array);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Item map =  array.get(position);
+                String gambar_detail = ((CircleImageView) view.findViewById(R.id.image_view)).toString();
+                String d_id = ((TextView) view.findViewById(R.id.id)).getText().toString();
+                String d_harga = ((TextView) view.findViewById(R.id.harga)).getText().toString();
+                String d_alamat = ((TextView) view.findViewById(R.id.alamat)).getText().toString();
+
+                Intent in = new Intent(getActivity(),detail_kos_kosan.class);
+                in.putExtra(config.KEY_GAMBAR, map.getFoto());
+                in.putExtra(config.TAG_id, d_id);
+                in.putExtra(config.KEY_harga, d_harga);
+                in.putExtra(config.KEY_alamat, d_alamat);
+                startActivity(in);
+            }
+        });
         list_kos();
         return v;
     }

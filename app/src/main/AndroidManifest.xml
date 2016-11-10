@@ -3,7 +3,9 @@
     package="com.kos.pemilik">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -27,7 +29,8 @@
         <activity android:name=".cari_kos" />
         <activity android:name=".hasil_cari" />
         <activity android:name=".regis" />
-        <activity android:name=".input_kos"></activity>
+        <activity android:name=".input_kos" />
+        <activity android:name=".detail_kos_kosan"></activity>
     </application>
 
 </manifest>

@@ -54,4 +54,10 @@
         android:text="tes"
         android:textSize="15dp" />
 
+    <TextView
+        android:id="@+id/id"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
